@@ -6,11 +6,13 @@ import {
   Route,
 } from "react-router-dom";
 import { Home } from './views/home';
+import { Match } from './views/match';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Route path="/match/:shareCode" > <Match /> </Route>
         <Route path="/" exact >
           <Home />
         </Route>

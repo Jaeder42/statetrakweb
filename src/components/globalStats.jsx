@@ -5,17 +5,25 @@ import styled from "styled-components";
 export const GlobalStats = ({ stats }) => {
   if (stats) {
     return (
-      <Container>
-        <code> {formatNumbers(stats.players_online)} players online.</code>
-        <code> {formatNumbers(stats.ongoing_matches)} games being played.</code>
-      </Container>
+      <div>
+        <h3>Stats for CS:GO</h3>
+        <Container>
+          <code> {formatNumbers(stats.players_online)} players online.</code>
+          <code>
+            {" "}
+            {formatNumbers(stats.ongoing_matches)} games being played.
+          </code>
+        </Container>
+      </div>
     );
   } else {
     return (
-      <Container>
-        {" "}
-        <code> Loading...</code>
-      </Container>
+      <div>
+        <h3>Stats for CS:GO</h3>
+        <Container>
+          <code> Loading...</code>
+        </Container>
+      </div>
     );
   }
 };
