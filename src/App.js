@@ -7,11 +7,13 @@ import {
 } from "react-router-dom";
 import { Home } from './views/home';
 import { Match } from './views/match';
+import { Profile } from './views/profile';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Route path="/profile/:id"> <Profile /></Route>
         <Route path="/match/:shareCode" > <Match /> </Route>
         <Route path="/" exact >
           <Home />
